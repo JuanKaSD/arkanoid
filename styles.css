@@ -1,0 +1,125 @@
+body{
+    overflow-x: hidden;
+    padding-top: 5%;
+}
+.ThreeLifes, .TwoLifes, .OneLifes {
+    width: 70px;
+    height: 40px;
+    border: 2px solid black;
+    margin-right: 0.5%;
+    color: white;
+}
+.ThreeLifes{
+    background-image: url("resources/brick3Lv.png");
+}
+.TwoLifes{
+    background-image: url("resources/brick2Lv.png");
+}
+.OneLifes{
+    background-image: url("resources/brick1Lv.png");
+}
+#game div{
+    color:#584545;
+    font-size:20px;
+    font-weight: bold;
+    text-align:center;
+    display: block;
+}
+.ball{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px white solid;
+    border-radius: 25px;
+    background: linear-gradient(white, black, white, black, white);
+}
+.stick{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    width:130px;
+    height: 30px;
+    background-color: red;
+    border: black solid 2px; 
+    border-radius:25px;
+}
+#game{
+    overflow: hidden;
+    padding-top:0;
+    margin-left: 2px;
+    background-image: url("resources/background.jpg");
+    height: 83vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-box-shadow: inset 3px 0px 22px 16px rgba(97,94,97,1);
+    -moz-box-shadow: inset 3px 0px 22px 16px rgba(97,94,97,1);
+    box-shadow: inset 3px 0px 22px 16px rgba(97,94,97,1);
+    border-radius:25px;
+}
+#game td{
+    width: 70px;
+    height: 40px;
+}
+.insert{
+    position: absolute;
+    background-image: url("resources/insertCoin.png");
+    left: 20vw;
+    top:30vh;
+    width: 600px;
+    height: 240px;
+    animation: bomb .8s infinite;
+	transform-origin: center;
+}
+@keyframes bomb {
+    from { transform: none; }
+    50% { transform: scale(1.3); }
+    to { transform: none; }
+}
+#info{
+    text-align: justify;
+    padding:5%;
+    vertical-align: middle;
+    color:blue;
+    background-color: lightyellow;
+    height: 560px;
+    width: 400px;
+    border: 1px brown solid;
+    border-radius:20px;
+    overflow-y:scroll;
+    overflow-y:hidden;
+}
+.stages{
+    display: inline-block;
+    background-color: grey;
+    color: black;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius:25px;
+    margin: 2px;
+    border: 2px black dashed;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    color:black;
+    font-weight: bold;
+}
+.upgrade{
+    background-color: orangered;
+    width: 50px;
+    height: 50px;
+    border: black solid 1px;
+    position: absolute;
+}
+.surprise{
+    animation: reflect .7s infinite;
+}
+@keyframes reflect {
+    from { filter: opacity(1); }
+    50% { filter: opacity(0.5); }
+    to { filter: opacity(1); }
+}
