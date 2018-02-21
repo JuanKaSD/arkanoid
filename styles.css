@@ -123,3 +123,13 @@ body{
     50% { filter: opacity(0.5); }
     to { filter: opacity(1); }
 }
+.changed{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+.changed a:visited, .changed a:active, .changed a:hover, .changed a{
+    color:black;
+    text-decoration: none;
+}

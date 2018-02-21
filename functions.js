@@ -97,7 +97,12 @@ var ball = {
         if(bounds.bottom >= gameBounds.bottom){
             alert("GAME OVER");
             game.stop();
-            game.init(0, true);
+            $(".stages").each(function(){
+                if($(this).css("background-color") == "rgb(0, 0, 255)"){
+                    game.init($(this).attr("id"), false);
+                }
+            });
+            
         }else{
             stickBounds = document.getElementById("stick").getBoundingClientRect();
             if(bounds.top <= gameBounds.top || bounds.bottom >= gameBounds.bottom){
@@ -259,7 +264,7 @@ var menu = {
             menu.el.append("<div class='stages' id='"+i+"'>"+(i+1)+"</div>");
         }
         menu.el.append("<br><br><p class='title'>CONTROLS</p><hr>");  
-        menu.el.append("<p style='color:black;'>SPACE --> START<br><br>ESC --> STOP<br><br>LEFT ARROW --> MOVE LEFT <br><br>RIGHT ARROW --> MOVE RIGHT</p>");
+        menu.el.append("<p style='color:black;'>SPACE --> START<br>ESC --> STOP<br>LEFT ARROW --> MOVE LEFT<br>RIGHT ARROW --> MOVE RIGHT</p><br><p class='changed'>Developed by: <a href='http://www.proyectocanario.com' target='_blank'>JuanKa Santana</a></p>");
     },
     getStages: function(){
         var xhr = new XMLHttpRequest();
